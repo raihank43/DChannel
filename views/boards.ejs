@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boards</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <body>
+        <div class="navbar">
+          <div class="logo">
+            <h1 id="header">DChannel</h1>
+          </div>
+    
+          <div class="navbar-button">
+            <a href="www.google.com">Home</a>
+            <a href="www.google.com">About</a>
+            <a href="www.google.com">Contact</a>
+          </div>
+        </div>
+
+        <div class="addPostForm">
+            <form action="" method="post">
+                <label for="">Name</label>
+                <input type="text" name="name"><br>
+
+                <label for="">Subject</label>
+                <input type="text" name="subject"><br>
+
+                <label for="">Desc</label>
+                <textarea name="Desc" name="desc"></textarea><br>
+
+                <label for="">Image</label>
+                <input type="text" name="threadImage"><br>
+
+                <input type="button" value="submit">
+
+
+
+
+
+            </form>
+
+        </div>
+    
+        <div class="container">
+          <div class="searchbar-container">
+            <!-- filter div -->
+            <div class="filter">
+              <form action="" method="post">
+                <select name="" id="">
+                  <option value="">Lorem</option>
+                </select>
+    
+                <select name="" id="">
+                  <option value="">Lorem</option>
+                </select>
+    
+                <select name="" id="">
+                  <option value="">Lorem</option>
+    
+                  <input type="button" value="Filter" />
+                </select>
+              </form>
+            </div>
+    
+            <!-- searchBar div -->
+            <div>
+              <form action="">
+                <input type="text" />
+                <input type="submit" value="Search" />
+              </form>
+            </div>
+          </div>
+    
+          <div class="empty-div"></div>
+          <div class="content-container">
+            <% data.forEach(element => { %>
+              <div class="content-box">
+              <img
+              src="<%= element.threadImage %>"                
+              alt=""
+              />
+              <div class="content-box-desc">
+                <h2><%= element.subject%></h2>
+                <p>Replies: 10 || Img: 10 || Posters: 10</p>
+              </div>
+    
+              <p>
+                <%= element.desc%>
+              </p>
+    
+              <a href="">View Thread</a>
+            </div>
+            <% }) %>
+           
+    
+            <div class="empty-div"></div>
+</body>
+</html>

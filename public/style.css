@@ -1,0 +1,123 @@
+.navbar {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+  }
+
+  .logo {
+    padding-left: 20px;
+  }
+
+  .navbar-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    font-size: 30px;
+  }
+
+  .container {
+    /* padding-top: 50px; */
+    background-color: black;
+    display: grid;
+    grid-template-columns: 0.5fr 5fr 0.5fr;
+    gap: 10px;
+  }
+  /* p {
+    border: solid;
+  } */
+
+  .searchbar-container {
+    padding: 10px;
+    padding-left: 100px;
+    background-color: rgb(3, 78, 3);
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .content-container {
+    display: grid;
+    margin: 0;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+  }
+
+  .content-box {
+    display: flex;
+    margin: 0;
+    background-color: rgb(128, 128, 128);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content-box > p {
+    text-align: center;
+  }
+
+  .content-box > img {
+    width: 100%;
+    height: 40%;
+    border-radius: 20px;
+  }
+
+  .content-box-desc {
+    text-align: center;
+  }
+
+  .addPostForm {
+    display: flex;
+    justify-content: center;
+  }
+
+  .addPostForm > * {
+    border: solid;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .content-container {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .content-container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .container {
+      /* padding-top: 50px; */
+      background-color: black;
+      display: grid;
+      grid-template-columns: 1fr 3fr 1fr;
+      gap: 10px;
+    }
+
+    .content-container {
+      grid-template-columns: 1fr;
+    }
+
+    .navbar {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    .logo {
+      padding-left: 20px;
+      text-align: center;
+    }
+
+    .navbar-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      font-size: 20px;
+      padding-bottom: 10px;
+    }
+  }
