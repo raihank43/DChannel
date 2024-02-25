@@ -2,11 +2,11 @@ const express = require("express");
 const app = express();
 const port = 3000;
 const router = require("./routes");
-const requestIp = require('request-ip');
+const requestIp = require("request-ip");
 
-
-app.use(requestIp.mw())
-app.use(express.static("public"))
+app.use(requestIp.mw());
+app.use(express.static("public"));
+app.use(express.urlencoded({extended:true}));
 app.set("view engine", "ejs");
 
 app.use(router);
